@@ -13,5 +13,16 @@ public class Variable {
     name = "MCA";
     System.out.println(name);
 
+    var grade = "A";
+    var part = 1234;
+
+    System.out.println(grade);
+    System.out.println(part);
+
+    final var firstName = "saya";
+    final String lastName = "kamu";
+    System.out.println(firstName);
+    System.out.println(lastName);
+
   }
 }
