@@ -6,11 +6,31 @@ public class Todo {
 
     public static void main(String[] args) {
 
+<<<<<<< HEAD
         // testShowTodo();
         // testAddTodo();
         // testRemoveTodo();
 
         testInput();
+=======
+    // testShowTodo();
+    // testAddTodo();
+    // testRemoveTodo();
+    // testInput();
+    testViewTodo();
+    testViewAddTodo();
+    testViewRemoveTodo();
+  }
+
+  static void showTodo() {
+    for (var i = 0; i < model.length; i++) {
+      var todo = model[i];
+      var no = i + 1;
+
+      if (todo != null) {
+        System.out.println(no + "." + todo);
+      }
+>>>>>>> 040ef0f9222509dec49bb3ce6093bd2721ffb740
     }
 
     static void showTodo() {
@@ -66,6 +86,7 @@ public class Todo {
 
     }
 
+<<<<<<< HEAD
     static void testAddTodo() {
         for (var i = 0; i < 10; i++) {
             addTodo("data" + i);
@@ -117,4 +138,84 @@ public class Todo {
         var channel = input("Alamat");
         System.out.println(channel);
     }
+=======
+    var channel = input("Alamat");
+    System.out.println(channel);
+  }
+
+  public static void viewShowTodo() {
+    while (true) {
+      showTodo();
+
+      System.out.println("Menu");
+      System.out.println("1. Add");
+      System.out.println("2. Delete");
+      System.out.println("x. Exit");
+
+      var input = input("choose");
+      if (input.equals("1")) {
+        addTodo(null);
+      } else if (input.equals("2")) {
+        removeTodo(1);
+
+      } else if (input.equals("x")) {
+        break;
+      } else {
+        System.out.println("choosen not deserve");
+      }
+    }
+  }
+
+  public static void testViewTodo() {
+    addTodo("1");
+    addTodo("2");
+    addTodo("3");
+    addTodo("4");
+
+    viewShowTodo();
+  }
+
+  public static void viewAddTodo() {
+    System.out.println("Menambah TODO");
+
+    var todo = input("Todo (x batal)");
+    if (todo.equals("x")) {
+
+    } else {
+      addTodo(todo);
+    }
+    viewShowTodo();
+  }
+
+  public static void testViewAddTodo() {
+    addTodo("10");
+    addTodo("20");
+
+    viewAddTodo();
+    showTodo();
+  }
+
+  public static void viewRemoveTodo() {
+    System.out.println("Delete TODO");
+    var number = input("Todo (x batal)");
+    if (number.equals("x")) {
+
+    } else {
+      boolean success = removeTodo(Integer.valueOf(number));
+      if (!success) {
+        System.out.println("Failed to delete TODO : " + number);
+      }
+    }
+  }
+
+  public static void testViewRemoveTodo() {
+    addTodo("10");
+    addTodo("20");
+    addTodo("30");
+    showTodo();
+
+    viewRemoveTodo();
+    showTodo();
+  }
+>>>>>>> 040ef0f9222509dec49bb3ce6093bd2721ffb740
 }
