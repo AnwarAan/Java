@@ -8,4 +8,8 @@ public record Login(String name, String password) {
   public Login(String name) {
     this(name, "pass");
   }
+
+  public Login() {
+    this("", "");
+  }
 }
