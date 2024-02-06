@@ -19,7 +19,6 @@ public class TodoRepositoryImpl implements TodoRepository {
   }
 
   public void resizeIsFull() {
-    System.out.println("full " + isFull());
     if (isFull()) {
 
       var temp = data;
