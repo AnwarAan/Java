@@ -1,4 +1,4 @@
-package Todo2.test;
+package test;
 
 public class TestService {
 
