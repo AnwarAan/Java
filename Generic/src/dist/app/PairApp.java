@@ -1,6 +1,6 @@
 package dist.app;
 
-import dist.Pair;
+import dist.util.Pair;
 
 public class PairApp {
   public static void main(String[] args) {

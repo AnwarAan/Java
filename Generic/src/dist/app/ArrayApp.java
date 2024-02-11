@@ -1,6 +1,6 @@
 package dist.app;
 
-import dist.ArrayHelper;
+import dist.util.ArrayHelper;
 
 public class ArrayApp {
   public static void main(String[] args) {
