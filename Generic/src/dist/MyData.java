@@ -1,4 +1,4 @@
-package dist;
+package Generic.src.dist;
 
 public class MyData<T> {
 
