@@ -1,4 +1,4 @@
-package dist;
+package dist.util;
 
 public class Pair<T, U> {
 

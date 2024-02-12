@@ -1,6 +1,6 @@
 package dist.app;
 
-import dist.MyData;
+import dist.util.MyData;
 
 public class MyDataApp {
   public static void main(String[] args) {
