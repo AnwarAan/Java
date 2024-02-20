@@ -1,6 +1,5 @@
 package unit_test;
 
-<<<<<<< HEAD
 import java.util.List;
 import java.util.Random;
 
@@ -84,19 +83,5 @@ public class RandomCalculatorTest extends AbstractCalculatorTest {
     var result = calculator.add(value, value);
 
     Assertions.assertEquals(expected, result);
-=======
-import java.util.Random;
-
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInfo;
-
-public class RandomCalculatorTest {
-
-  @Test
-  void testRandom(TestInfo info, Random random) {
-    var a = random.nextInt();
-    var b = random.nextInt();
-
->>>>>>> 53069211b0d5e059db40b6baadced593778d08ad
   }
 }
