@@ -1,61 +1,61 @@
-package view;
+// package view;
 
-import entity.Todo;
-import service.TodoService;
-import util.InputUtil;
+// import entity.Todo;
+// import service.TodoService;
+// import util.InputUtil;
 
-public class TodoView {
+// public class TodoView {
 
-  private TodoService todoService;
+// private TodoService todoService;
 
-  public TodoView(TodoService todoService) {
-    this.todoService = todoService;
-  }
+// public TodoView(TodoService todoService) {
+// this.todoService = todoService;
+// }
 
-  public void showTodo() {
-    while (true) {
-      todoService.showTodo();
+// public void showTodo() {
+// while (true) {
+// todoService.showTodo();
 
-      System.out.println("MENU : ");
-      System.out.println("1. Tambah");
-      System.out.println("2. Hapus");
-      System.out.println("x. Keluar");
+// System.out.println("MENU : ");
+// System.out.println("1. Tambah");
+// System.out.println("2. Hapus");
+// System.out.println("x. Keluar");
 
-      var input = InputUtil.input("choose");
+// var input = InputUtil.input("choose");
 
-      if (input.equals("1")) {
-        addTodo();
-      } else if (input.equals("2")) {
-        removeTodo();
-      } else if (input.equals("x")) {
-        break;
-      } else {
-        System.out.println("Wrong Input");
-      }
-    }
-  }
+// if (input.equals("1")) {
+// addTodo();
+// } else if (input.equals("2")) {
+// removeTodo();
+// } else if (input.equals("x")) {
+// break;
+// } else {
+// System.out.println("Wrong Input");
+// }
+// }
+// }
 
-  public void addTodo() {
-    System.out.println("ADD TODO HERE");
+// public void addTodo() {
+// System.out.println("ADD TODO HERE");
 
-    var todo = InputUtil.input("Todo (x => exit)");
+// var todo = InputUtil.input("Todo (x => exit)");
 
-    if (todo.equals("x")) {
+// if (todo.equals("x")) {
 
-    } else {
-      todoService.addTodo(todo);
-    }
-  }
+// } else {
+// todoService.addTodo(todo);
+// }
+// }
 
-  public void removeTodo() {
-    System.out.println("REMOVE TODO HERE");
+// public void removeTodo() {
+// System.out.println("REMOVE TODO HERE");
 
-    var number = InputUtil.input("Todo (x => exit)");
+// var number = InputUtil.input("Todo (x => exit)");
 
-    if (number.equals("x")) {
+// if (number.equals("x")) {
 
-    } else {
-      todoService.removeTodo(Integer.valueOf(number));
-    }
-  }
-}
+// } else {
+// todoService.removeTodo(Integer.valueOf(number));
+// }
+// }
+// }
