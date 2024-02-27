@@ -44,7 +44,7 @@ public class TodolistRepositoryImpl implements TodolistRepository {
   @Override
   public void add(Todolist todolist) {
     String sql = "INSERT INTO todolist (todo) VALUES (?)";
-
+    System.out.println(todolist);
     try (Connection connection = dataSource.getConnection()) {
       PreparedStatement statement = connection.prepareStatement(sql);
       statement.setString(1, todolist.getTodo());

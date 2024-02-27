@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: todo3.util.DatabaseUtilTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in todo3.util.DatabaseUtilTest
+testConnection  Time elapsed: 0 s  <<< ERROR!
+java.sql.SQLException: HikariDataSource HikariDataSource (HikariPool-1) has been closed.
+	at todo3.util.DatabaseUtilTest.testConnection(DatabaseUtilTest.java:15)
+
