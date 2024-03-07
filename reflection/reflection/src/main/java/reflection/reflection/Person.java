@@ -1,6 +1,6 @@
 package reflection.reflection;
 
-public class Person {
+public class Person implements Nameable {
   private String firsName;
   private String lastName;
 
