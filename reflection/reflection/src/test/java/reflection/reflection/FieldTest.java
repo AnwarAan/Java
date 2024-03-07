@@ -38,11 +38,11 @@ public class FieldTest {
 
     Person person2 = new Person("mc", "anwar");
     firstName.set(person2, "mca");
-    System.out.println(person2.getFirsName());
+    System.out.println(person2.getFirstName());
 
     Person person3 = new Person("mc", "anwar");
     firstName.set(person3, "anwar");
-    System.out.println(person2.getFirsName());
+    System.out.println(person2.getFirstName());
 
   }
 }
