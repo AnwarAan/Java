@@ -1,0 +1,43 @@
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+  version="2.1">
+
+  <persistence-unit name="JPA">
+
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <!-- Entity Classes -->
+    <class>jpa.javapersistanceapi.entity.Customer</class>
+    <class>jpa.javapersistanceapi.entity.Category</class>
+    <class>jpa.javapersistanceapi.entity.Image</class>
+    <class>jpa.javapersistanceapi.entity.Member</class>
+    <class>jpa.javapersistanceapi.entity.Department</class>
+    <class>jpa.javapersistanceapi.entity.User</class>
+    <class>jpa.javapersistanceapi.entity.Credential</class>
+    <class>jpa.javapersistanceapi.entity.Wallet</class>
+    <class>jpa.javapersistanceapi.entity.Product</class>
+    <class>jpa.javapersistanceapi.entity.Brand</class>
+    <class>jpa.javapersistanceapi.entity.Department</class>
+    <class>jpa.javapersistanceapi.entity.Employee</class>
+    <class>jpa.javapersistanceapi.entity.Manager</class>
+    <class>jpa.javapersistanceapi.entity.VicePresident</class>
+    <class>jpa.javapersistanceapi.entity.Payment</class>
+    <class>jpa.javapersistanceapi.entity.PaymentGopay</class>
+    <class>jpa.javapersistanceapi.entity.PaymentCreditCard</class>
+    <class>jpa.javapersistanceapi.entity.Transaction</class>
+    <class>jpa.javapersistanceapi.entity.TransactionDebit</class>
+    <class>jpa.javapersistanceapi.entity.TransactionCredit</class>
+
+    <properties>
+      <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+      <property name="jakarta.persistence.jdbc.url"
+        value="jdbc:mysql://localhost:3306/jpa" />
+      <property name="jakarta.persistence.jdbc.user" value="root" />
+      <property name="jakarta.persistence.jdbc.password" value="Megagican12" />
+      <property name="hibernate.show_sql" value="true" />
+      <property name="hibernate.format_sql" value="true" />
+    </properties>
+  </persistence-unit>
+
+</persistence>
