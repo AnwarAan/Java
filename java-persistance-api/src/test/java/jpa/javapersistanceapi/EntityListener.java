@@ -1,30 +1,26 @@
 package jpa.javapersistanceapi;
 
-import java.time.LocalDateTime;
-import java.util.Calendar;
-
 import org.junit.jupiter.api.Test;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
+import jpa.javapersistanceapi.entity.Member;
 import jpa.javapersistanceapi.entity.Category;
-import jpa.javapersistanceapi.entity.CustomerType;
 import jpa.javapersistanceapi.util.JpaUtil;
 
-public class DateTimeTest {
+public class EntityListener {
   @Test
-  void testDateTime() {
+  void testListener() {
     EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
     EntityManager entityManager = entityManagerFactory.createEntityManager();
     EntityTransaction entityTransaction = entityManager.getTransaction();
+
     entityTransaction.begin();
 
     Category category = new Category();
-    category.setName("Food");
+    category.setName("example");
 
-    category.setCreatedAd(Calendar.getInstance());
-    category.setUpdatedAt(LocalDateTime.now());
     entityManager.persist(category);
 
     entityTransaction.commit();

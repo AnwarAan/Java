@@ -5,16 +5,19 @@ import java.util.Calendar;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
+import jpa.javapersistanceapi.listener.UpdatedAtListener;
 
 @Entity
 @Table(name = "categories")
-public class Category {
+@EntityListeners({ UpdatedAtListener.class })
+public class Category implements UpdatedAtAware {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private String id;
@@ -28,7 +31,7 @@ public class Category {
   private Calendar createdAd;
 
   @Column(name = "updated_at")
-  private LocalDateTime updateAt;
+  private LocalDateTime updatedAt;
 
   public Category() {
   }
@@ -65,12 +68,12 @@ public class Category {
     this.createdAd = createdAd;
   }
 
-  public LocalDateTime getUpdateAt() {
-    return updateAt;
+  public LocalDateTime getUpdatedAt() {
+    return updatedAt;
   }
 
-  public void setUpdateAt(LocalDateTime updateAt) {
-    this.updateAt = updateAt;
+  public void setUpdatedAt(LocalDateTime updatedAt) {
+    this.updatedAt = updatedAt;
   }
 
 }
