@@ -5,6 +5,7 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 import jakarta.persistence.Column;
 
 @Entity
@@ -19,6 +20,9 @@ public class Customer {
 
   @Column(name = "email")
   private String email;
+
+  @Transient
+  private String fullName;
 
   private Byte age;
   private Boolean married;
@@ -75,6 +79,14 @@ public class Customer {
 
   public void setMarried(Boolean married) {
     this.married = married;
+  }
+
+  public String getFullName() {
+    return fullName;
+  }
+
+  public void setFullName(String fullName) {
+    this.fullName = fullName;
   }
 
   @Override
