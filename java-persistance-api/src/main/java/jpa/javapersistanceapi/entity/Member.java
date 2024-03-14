@@ -15,6 +15,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.MapKeyColumn;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "members")
@@ -33,6 +34,10 @@ public class Member {
   private List<String> hobbies;
 
   private String email;
+
+  @Transient
+
+  private String fullName;
 
   @ElementCollection
   @CollectionTable(name = "skills", joinColumns = @JoinColumn(name = "member_id", referencedColumnName = "id"))
@@ -81,6 +86,18 @@ public class Member {
 
   public void setSkills(Map<String, Integer> skills) {
     this.skills = skills;
+  }
+
+  public void postLoad() {
+    fullName = name.getTitle() + " " + name.getFirstName() + " " + name.getMiddleName() + " " + name.getLastName();
+  }
+
+  public String getFullName() {
+    return fullName;
+  }
+
+  public void setFullName(String fullName) {
+    this.fullName = fullName;
   }
 
 }
