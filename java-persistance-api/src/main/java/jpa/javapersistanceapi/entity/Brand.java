@@ -21,9 +21,7 @@ import jakarta.persistence.Version;
 @NamedNativeQueries({
     @NamedNativeQuery(name = "Brand.native.findAll", query = "select * from brands", resultClass = Brand.class)
 })
-public class Brand {
-  @Id
-  private String id;
+public class Brand extends AuditableEntity<String> {
 
   private String name;
 
@@ -65,14 +63,6 @@ public class Brand {
 
   public void setProducts(List<Product> products) {
     this.products = products;
-  }
-
-  public String getId() {
-    return id;
-  }
-
-  public void setId(String id) {
-    this.id = id;
   }
 
 }
